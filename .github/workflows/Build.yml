@@ -15,7 +15,7 @@ jobs:
 
     - name: Build with dotnet
       working-directory: .\machina
-      run: dotnet publish -r win-x64 -c Release
+      run: dotnet build -r win-x64 -c Release
 
     - name: Store Machina.dll
       uses: actions/upload-artifact@v3
