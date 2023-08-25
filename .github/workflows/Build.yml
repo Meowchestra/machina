@@ -24,7 +24,7 @@ jobs:
         path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.dll
         if-no-files-found: error
         retention-days: 1
-		
+
     - name: Store Machina.FFXIV.dll
       uses: actions/upload-artifact@v3
       with:
