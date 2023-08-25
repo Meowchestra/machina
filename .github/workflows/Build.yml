@@ -21,7 +21,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Machina
-        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.dll
+        path: D:/a/machina/machina/Machina.FFXIV/bin/Release/netstandard2.0/Machina.dll
         if-no-files-found: error
         retention-days: 1
 
@@ -29,6 +29,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Machina.FFXIV
-        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.FFXIV.dll
+        path: D:/a/machina/machina/Machina.FFXIV/bin/Release/netstandard2.0/Machina.FFXIV.dll
         if-no-files-found: error
         retention-days: 1
