@@ -15,13 +15,13 @@ jobs:
 
     - name: Build with dotnet
       working-directory: .\machina
-      run: dotnet build -r win-x64 -c Release
+      run: dotnet build -c Release
 
     - name: Store Machina.dll
       uses: actions/upload-artifact@v3
       with:
         name: Machina
-        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\win-x64\Machina.dll
+        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.dll
         if-no-files-found: error
         retention-days: 1
 
@@ -29,6 +29,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Machina.FFXIV
-        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\win-x64\Machina.FFXIV.dll
+        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.FFXIV.dll
         if-no-files-found: error
         retention-days: 1
