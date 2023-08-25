@@ -1,0 +1,34 @@
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Build with dotnet
+      working-directory: .\machina
+      run: dotnet publish -r win-x64 -c Release
+
+    - name: Store Machina.dll
+      uses: actions/upload-artifact@v3
+      with:
+        name: Machina
+        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.dll
+        if-no-files-found: error
+        retention-days: 1
+		
+    - name: Store Machina.FFXIV.dll
+      uses: actions/upload-artifact@v3
+      with:
+        name: Machina.FFXIV
+        path: machina\Machina.FFXIV\bin\Release\netstandard2.0\Machina.FFXIV.dll
+        if-no-files-found: error
+        retention-days: 1
