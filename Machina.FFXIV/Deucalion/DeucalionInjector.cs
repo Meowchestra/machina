@@ -155,7 +155,7 @@ namespace Machina.FFXIV.Deucalion
                 }
             }
 
-            string release_checksum = "1D-6D-E6-A1-23-15-39-F0-92-DF-25-32-40-10-A3-F1-37-2C-5E-4B-3B-55-4A-10-B6-77-D4-C2-5C-D4-A4-74";
+            string release_checksum = "0A-A1-D0-2A-97-0B-A5-04-3C-E8-77-AA-67-4A-65-A6-74-48-F4-8D-D3-85-87-44-A0-5D-E4-A3-84-49-80-E8";
 
             // validate checksum
             byte[] checksum = CalculateChecksum(fileName);
