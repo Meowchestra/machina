@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-
+    <TargetFramework>netcoreapp6.0</TargetFramework>
     <IsPackable>false</IsPackable>
-
-    <Configurations>Debug;Release;NuGet</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
+
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="FirewallWrapperTests.cs" />
   </ItemGroup>

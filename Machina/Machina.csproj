@@ -2,7 +2,7 @@
     
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <Configurations>Debug;Release;NuGet</Configurations>
+        <Configurations>Debug;Release</Configurations>
     </PropertyGroup>
     
     <PropertyGroup>
@@ -14,37 +14,9 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <NoWarn>1701;1702;IDE0073;IDE0005</NoWarn>
     </PropertyGroup>
-    
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NuGet|AnyCPU' ">
-        <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>Ravahn.Machina.Keyfile.snk</AssemblyOriginatorKeyFile>
-        <PackageId>Machina</PackageId>
-        <Authors>Ravahn</Authors>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <RepositoryUrl>https://github.com/ravahn/machina</RepositoryUrl>
-        <PackageTags>raw socket winpcap tcpip c# packet sniffer</PackageTags>
-        <DelaySign>false</DelaySign>
-        <NeutralLanguage>en</NeutralLanguage>
-        <Description>General-purpose library for raw network packet reading and reassembly</Description>
-        <Copyright>Copyright © 2022 Ravahn</Copyright>
-        <PackageProjectUrl>https://github.com/ravahn/machina</PackageProjectUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-    </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="Ravahn.Machina.Keyfile.snk" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\LICENSE.md">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-        <None Include="..\README.md">
-          <PackagePath></PackagePath>
-          <Pack>True</Pack>
-        </None>
+        <None Include="..\LICENSE.md" Pack="True" />
+        <None Include="..\README.md" Pack="True" />
     </ItemGroup>
 </Project>
