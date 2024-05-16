@@ -2,12 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp6.0</TargetFramework>
-
     <IsPackable>false</IsPackable>
-
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-
-    <Configurations>Debug;Release;NuGet</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
