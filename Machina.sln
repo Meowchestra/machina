@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Machina", "Machina\Machina.FFXIV.csproj", "{8873397E-0B05-49E4-8F48-55A80A663D45}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		CHANGELOG.md = CHANGELOG.md
-		LICENSE.md = LICENSE.md
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Machina", "Machina\Machina.csproj", "{640B1760-6F06-4455-82C0-3027A2CEFC49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Machina.FFXIV", "Machina.FFXIV\Machina.FFXIV.csproj", "{8873397E-0B05-49E4-8F48-55A80A663D45}"
