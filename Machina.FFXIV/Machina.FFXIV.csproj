@@ -6,20 +6,20 @@
     </PropertyGroup>
     
     <PropertyGroup>
-        <Version>2.3.9.6</Version>
-        <AssemblyVersion>2.3.9.6</AssemblyVersion>
-        <FileVersion>2.3.9.6</FileVersion>
+        <Version>2.3.9.7</Version>
+        <AssemblyVersion>2.3.9.7</AssemblyVersion>
+        <FileVersion>2.3.9.7</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
  
     <ItemGroup>
-        <None Remove="Deucalion\Distrib\deucalion-0.9.5.dll" />
+        <None Remove="Deucalion\Distrib\deucalion-1.0.0.dll" />
     </ItemGroup>
 
     <ItemGroup>
-        <EmbeddedResource Include="Deucalion\Distrib\deucalion-0.9.5.dll" />
+        <EmbeddedResource Include="Deucalion\Distrib\deucalion-1.0.0.dll" />
         <EmbeddedResource Include="Headers\Opcodes\Chinese.txt" />
         <EmbeddedResource Include="Headers\Opcodes\Global.txt" />
         <EmbeddedResource Include="Headers\Opcodes\Korean.txt" />
