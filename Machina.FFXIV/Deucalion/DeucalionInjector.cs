@@ -155,11 +155,11 @@ namespace Machina.FFXIV.Deucalion
                 }
             }
 
-            string release_checksum = "45-F9-DA-74-54-4E-7B-61-21-C3-48-92-D2-06-AD-06-2D-BA-C4-38-CB-A8-04-98-F3-88-78-20-5A-8A-B5-D3";
+            string release_checksum = "A3-E3-3D-87-27-2F-99-B8-83-C4-DC-AB-D0-B2-CA-B2-99-6C-8D-B4-9D-09-CD-FD-0C-61-A5-05-57-D2-5A-D6"; // 1.0.0 CUSTOM
 
             // validate checksum
             byte[] checksum = CalculateChecksum(fileName);
-            if (BitConverter.ToString(checksum) != release_checksum)
+            if (!string.Equals(BitConverter.ToString(checksum), release_checksum, StringComparison.OrdinalIgnoreCase))
             {
                 Trace.WriteLine($"DeucalionInjector: File checksum is invalid, cannot inject dll at {fileName}", "DEBUG-MACHINA");
                 return string.Empty;
