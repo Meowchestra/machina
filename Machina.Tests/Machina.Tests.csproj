@@ -4,8 +4,6 @@
     <TargetFramework>netcoreapp6.0</TargetFramework>
     <IsPackable>false</IsPackable>
     <Configurations>Debug;Release</Configurations>
-
-    <Configurations>Debug;Release;NuGet</Configurations>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
 
