@@ -15,6 +15,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -205,13 +206,10 @@ namespace Machina.FFXIV.Deucalion
             // Ensure the dll not be re-injected. (It will prevent auto unload since its ref always beyond 0 if that happened)
             using (Process process = Process.GetProcessById(processId))
             {
-                foreach (ProcessModule module in process.Modules)
+                if (process.Modules.Cast<ProcessModule>().Any(module => module.ModuleName == DeucalionFileName))
                 {
-                    if (module.ModuleName == _resourceFileName)
-                    {
-                        Trace.WriteLine($"DeucalionInjector: Deucalion has already injected into process {processId}.", "DEBUG-MACHINA");
-                        return true;
-                    }
+                    Trace.WriteLine($"DeucalionInjector: Deucalion has already injected into process {processId}.", "DEBUG-MACHINA");
+                    return true;
                 }
             }
 
