@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
-        <Configurations>Debug;Release;NuGet</Configurations>
+        <TargetFrameworks>net9.0</TargetFrameworks>
+        <Configurations>Debug;Release</Configurations>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <Version>2.4.1.2</Version>
         <AssemblyVersion>2.4.1.2</AssemblyVersion>
@@ -13,32 +13,24 @@
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+        <NoWarn>1701;1702;CS0649;IDE0073;IDE0005</NoWarn>
     </PropertyGroup>
-    
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NuGet|AnyCPU' ">
-        <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>Ravahn.Machina.Keyfile.snk</AssemblyOriginatorKeyFile>
-        <PackageId>Machina.FFXIV</PackageId>
-        <DelaySign>false</DelaySign>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <Authors>Ravahn</Authors>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <RepositoryUrl>https://github.com/ravahn/machina</RepositoryUrl>
-        <NeutralLanguage>en</NeutralLanguage>
-        <Description>Extension to Machina network library to support decoding of Final Fantasy XIV network data</Description>
-        <Copyright>Copyright © 2024 Ravahn</Copyright>
-        <PackageProjectUrl>https://github.com/ravahn/machina</PackageProjectUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>portable</DebugType>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <Optimize>false</Optimize>
     </PropertyGroup>
-    
-    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='NuGet|netstandard2.0|AnyCPU'">
-      <Optimize>True</Optimize>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <GenerateDebugInformation>false</GenerateDebugInformation>
+        <Optimize>true</Optimize>
     </PropertyGroup>
- 
+
     <ItemGroup>
         <None Remove="Deucalion\Distrib\deucalion-1.1.0.dll" />
-        <None Remove="Ravahn.Machina.Keyfile.snk" />
     </ItemGroup>
 
     <ItemGroup>
@@ -52,14 +44,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\LICENSE.md">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-        <None Include="..\README.md">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
+        <None Include="..\LICENSE.md" Pack="True" />
+        <None Include="..\README.md" Pack="True" />
     </ItemGroup>
 
     <ItemGroup>

@@ -152,7 +152,7 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return "19-94-1f-2b-ff-b9-d5-1f-92-cd-60-10-5d-25-cd-19-0c-65-78-0f-6c-a0-70-8b-d8-48-3a-4a-fd-df-ea-93";  // 1.1.0
+                return "64-10-52-9a-e2-2a-e5-9c-03-d4-28-b2-51-0c-78-d8-18-dd-ab-8c-4d-84-a9-e7-f5-39-de-03-7b-a7-6b-66"; // 1.1.0 (CUSTOM - NO LOGS)
             }
         }
 

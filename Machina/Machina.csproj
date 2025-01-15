@@ -1,48 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    
+
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
-        <Configurations>Debug;Release;NuGet</Configurations>
+        <TargetFrameworks>net9.0</TargetFrameworks>
+        <Configurations>Debug;Release</Configurations>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <Version>2.3.1.3</Version>
         <AssemblyVersion>2.3.1.3</AssemblyVersion>
         <FileVersion>2.3.1.3</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
-        <EnforceCodeStyleInBuild>TRUE</EnforceCodeStyleInBuild>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+        <NoWarn>1701;1702;CS0649;IDE0073;IDE0005</NoWarn>
     </PropertyGroup>
-    
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NuGet|AnyCPU' ">
-        <SignAssembly>true</SignAssembly>
-        <AssemblyOriginatorKeyFile>Ravahn.Machina.Keyfile.snk</AssemblyOriginatorKeyFile>
-        <PackageId>Machina</PackageId>
-        <Authors>Ravahn</Authors>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <RepositoryUrl>https://github.com/ravahn/machina</RepositoryUrl>
-        <PackageTags>raw socket winpcap tcpip c# packet sniffer</PackageTags>
-        <DelaySign>false</DelaySign>
-        <NeutralLanguage>en</NeutralLanguage>
-        <Description>General-purpose library for raw network packet reading and reassembly</Description>
-        <Copyright>Copyright © 2022 Ravahn</Copyright>
-        <PackageProjectUrl>https://github.com/ravahn/machina</PackageProjectUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>portable</DebugType>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <Optimize>false</Optimize>
     </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>none</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <GenerateDebugInformation>false</GenerateDebugInformation>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
+
     <ItemGroup>
-        <None Remove="Ravahn.Machina.Keyfile.snk" />
+        <None Include="..\LICENSE.md" Pack="True" />
+        <None Include="..\README.md" Pack="True" />
     </ItemGroup>
-    <ItemGroup>
-        <None Include="..\LICENSE.md">
-            <Pack>True</Pack>
-            <PackagePath></PackagePath>
-        </None>
-        <None Include="..\README.md">
-          <PackagePath></PackagePath>
-          <Pack>True</Pack>
-        </None>
-    </ItemGroup>
+
 </Project>
