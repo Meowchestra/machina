@@ -139,7 +139,7 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return "deucalion-1.1.0.dll";
+                return "deucalion-1.1.2.dll";
             }
         }
 
@@ -153,7 +153,7 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return "64-10-52-9a-e2-2a-e5-9c-03-d4-28-b2-51-0c-78-d8-18-dd-ab-8c-4d-84-a9-e7-f5-39-de-03-7b-a7-6b-66"; // 1.1.0 (CUSTOM - NO LOGS)
+                return "0a-03-ba-7b-ae-dd-67-12-a4-ca-57-c3-89-c9-c9-7e-7a-7f-3b-79-e8-c9-d4-c0-6c-a4-91-77-f2-ea-dd-d3"; // 1.1.2 (CUSTOM - NO LOGS)
             }
         }
 

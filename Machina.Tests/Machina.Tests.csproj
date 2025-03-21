@@ -13,11 +13,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MSTest.TestFramework" Version="3.7.1" />
+    <ProjectReference Include="..\Machina\Machina.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Machina\Machina.csproj" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.9.0-preview.25167.10" />
   </ItemGroup>
 
 </Project>

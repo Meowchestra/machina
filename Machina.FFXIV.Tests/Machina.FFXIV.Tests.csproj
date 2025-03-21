@@ -9,9 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Castle.Core" Version="5.2.1" />
     <PackageReference Include="Moq" Version="4.20.72" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.7.1" />
-    <PackageReference Include="System.Diagnostics.EventLog" Version="9.0.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.9.0-preview.25167.10" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="10.0.0-preview.2.25163.2" />
   </ItemGroup>
 
   <ItemGroup>
