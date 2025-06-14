@@ -6,9 +6,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>2.4.2.2</Version>
-        <AssemblyVersion>2.4.2.2</AssemblyVersion>
-        <FileVersion>2.4.2.2</FileVersion>
+        <Version>2.4.2.6</Version>
+        <AssemblyVersion>2.4.2.6</AssemblyVersion>
+        <FileVersion>2.4.2.6</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -32,6 +32,9 @@
     <ItemGroup>
         <None Remove="Deucalion\Distrib\deucalion-1.1.2.dll" />
         <None Remove="Deucalion\Distrib\deucalion-1.2.1.dll" />
+        <None Remove="Deucalion\Distrib\deucalion-1.1.0.dll" />
+        <None Remove="Deucalion\Distrib\deucalion-1.2.1.dll" />
+      <None Remove="Ravahn.Machina.Keyfile.snk" />
     </ItemGroup>
 
     <ItemGroup>
@@ -61,6 +64,8 @@
 	
     <ItemGroup>
       <Content Include="Deucalion\Distrib\deucalion-1.2.1.dll">
+  <ItemGroup>
+    <Content Include="Deucalion\Distrib\deucalion-1.2.1.dll">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         <TargetPath>deucalion-1.2.1.dll</TargetPath>
         <Pack>True</Pack>
@@ -69,4 +74,6 @@
       </Content>
     </ItemGroup>
 
+    </Content>
+  </ItemGroup>
 </Project>

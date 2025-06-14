@@ -168,7 +168,7 @@ namespace Machina.FFXIV.Deucalion
             {
                 return GameRegion == GameRegion.Korean ? 
                     "0a-03-ba-7b-ae-dd-67-12-a4-ca-57-c3-89-c9-c9-7e-7a-7f-3b-79-e8-c9-d4-c0-6c-a4-91-77-f2-ea-dd-d3" :  // 1.1.2 (CUSTOM - NO LOGS)
-                    "35-85-aa-92-47-27-c0-51-b7-d1-8e-8a-2d-45-65-95-24-5e-4c-6e-07-49-97-71-48-7b-fc-96-e4-f0-12-c8";   // 1.2.1 (CUSTOM - NO LOGS)
+                    "ff-2f-9d-3a-83-bf-ee-29-96-96-29-13-87-3c-a2-10-7c-45-6f-e4-88-04-01-6f-9b-0f-fa-97-1c-bc-1b-0c";   // 1.2.1 (CUSTOM - NO LOGS - 1.2.1v2)
             }
         }
 
