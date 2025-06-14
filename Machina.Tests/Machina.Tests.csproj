@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MSTest.TestFramework" Version="3.9.0-preview.25167.10" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.9.2" />
   </ItemGroup>
 
 </Project>
