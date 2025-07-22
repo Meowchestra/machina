@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>2.4.2.6</Version>
-        <AssemblyVersion>2.4.2.6</AssemblyVersion>
-        <FileVersion>2.4.2.6</FileVersion>
+        <Version>2.4.3.1</Version>
+        <AssemblyVersion>2.4.3.1</AssemblyVersion>
+        <FileVersion>2.4.3.1</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -34,7 +34,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="Deucalion\Distrib\deucalion-1.1.2.dll" />
         <None Remove="Deucalion\Distrib\deucalion-1.2.1.dll" />
     </ItemGroup>
 
@@ -51,16 +50,6 @@
     <ItemGroup>
         <None Include="..\LICENSE.md" Pack="True" />
         <None Include="..\README.md" Pack="True" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="Deucalion\Distrib\deucalion-1.1.2.dll">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        <TargetPath>deucalion-1.1.2.dll</TargetPath>
-        <Pack>True</Pack>
-        <PackagePath>lib\$(TargetFrameworks)</PackagePath>
-        <PackageCopyToOutput>true</PackageCopyToOutput>
-      </Content>
     </ItemGroup>
 
     <ItemGroup>
