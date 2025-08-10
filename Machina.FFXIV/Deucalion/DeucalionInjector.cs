@@ -139,7 +139,7 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return GameRegion == GameRegion.Korean ? "deucalion-1.2.1.dll" : "deucalion-1.2.1.dll";
+                return GameRegion == GameRegion.Korean ? "deucalion-1.2.1.dll" : "deucalion-1.3.2.dll";
             }
         }
 
@@ -151,8 +151,8 @@ namespace Machina.FFXIV.Deucalion
             get
             {
                 return GameRegion == GameRegion.Korean ?
-                    new Version(1, 2, 1) :
-                    new Version(1, 2, 1);
+                    new Version(1, 2, 0) :// supports 1.2.0 + 1.2.1
+                    new Version(1, 3, 2);
             }
         }
 
@@ -167,8 +167,8 @@ namespace Machina.FFXIV.Deucalion
             get
             {
                 return GameRegion == GameRegion.Korean ?
-                    "ff-2f-9d-3a-83-bf-ee-29-96-96-29-13-87-3c-a2-10-7c-45-6f-e4-88-04-01-6f-9b-0f-fa-97-1c-bc-1b-0c" : // 1.2.1 (CUSTOM - NO LOGS - 1.2.1v2)
-                    "ff-2f-9d-3a-83-bf-ee-29-96-96-29-13-87-3c-a2-10-7c-45-6f-e4-88-04-01-6f-9b-0f-fa-97-1c-bc-1b-0c";  // 1.2.1 (CUSTOM - NO LOGS - 1.2.1v2)
+                    "ff-2f-9d-3a-83-bf-ee-29-96-96-29-13-87-3c-a2-10-7c-45-6f-e4-88-04-01-6f-9b-0f-fa-97-1c-bc-1b-0c" : // 1.2.1 (CUSTOM - NO LOGS)
+                    "16-7c-5c-fc-3b-94-82-5a-ab-45-61-4f-76-e4-f0-9b-d1-41-30-f3-ed-02-ae-b1-db-5a-e8-cc-95-e5-50-31"; // 1.3.2 (CUSTOM - NO LOGS)
             }
         }
 
