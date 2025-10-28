@@ -95,7 +95,7 @@ namespace Machina.FFXIV.Tests.Deucalion
                 System.Threading.Thread.Sleep(1000);
             }
 
-            Assert.IsTrue(true);
+            //Assert.IsTrue(true);
         }
     }
 }

@@ -200,7 +200,7 @@ namespace Machina.FFXIV.Tests
         /**
          * BUG: if magic0 matches but any of magic 1-3 is not 0, then StoreData will not return
          */
-        [TestMethod, Timeout(2000)]
+        [TestMethod, Timeout(2000, CooperativeCancellation = true)]
         public void FFXIVBundle_StoreData_NoInfiniteLoopWithFalsePositiveMagic()
         {
             byte[] data = new byte[]

@@ -318,7 +318,7 @@ namespace Machina.Tests
             IPDecoder sut = new(sourceIP, destinationIP, IPProtocol.TCP);
 
             sut.FilterAndStoreData(data, data.Length);
-            Assert.AreEqual(1, sut.Fragments.Count);
+            Assert.HasCount(1, sut.Fragments);
             Assert.IsEmpty(TestInfrastructure.Listener.Messages);
 
             byte[] ret = sut.GetNextIPPayload();
