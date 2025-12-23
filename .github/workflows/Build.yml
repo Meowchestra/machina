@@ -22,7 +22,7 @@ jobs:
       run: dotnet build -c Release
 
     - name: Store Machina.dll
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: Machina
         path: Machina.FFXIV/bin/Release/net10.0/Machina.dll
@@ -30,7 +30,7 @@ jobs:
         retention-days: 1
 
     - name: Store Machina.FFXIV.dll
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
         name: Machina.FFXIV
         path: Machina.FFXIV/bin/Release/net10.0/Machina.FFXIV.dll
