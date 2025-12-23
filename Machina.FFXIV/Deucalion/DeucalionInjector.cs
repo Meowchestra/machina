@@ -128,7 +128,7 @@ namespace Machina.FFXIV.Deucalion
         public static string LastInjectionError { get; internal set; }
 
         /// <summary>
-        /// Specifies the Game region - Korean or Global.  Required to distinguish between expected Deucalion dll versions.
+        /// Specifies the Game region - Korean, Tc, or Global.  Required to distinguish between expected Deucalion dll versions.
         /// </summary>
         public static GameRegion GameRegion { get; set; } = GameRegion.Global;
 
@@ -139,7 +139,7 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return GameRegion == GameRegion.Korean ? "deucalion-1.4.0.dll" : "deucalion-1.4.0.dll";
+                return GameRegion == GameRegion.Tc ? "deucalion-1.2.1.dll" : "deucalion-1.4.0.dll";
             }
         }
 
@@ -150,8 +150,8 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return GameRegion == GameRegion.Korean ?
-                    new Version(1, 4, 0) :
+                return GameRegion == GameRegion.Tc?
+                    new Version(1, 2, 1) :
                     new Version(1, 4, 0);
             }
         }
@@ -166,7 +166,8 @@ namespace Machina.FFXIV.Deucalion
         {
             get
             {
-                return "45-df-8c-8b-16-f9-12-9d-a9-7e-81-32-c5-10-cc-6b-f7-45-a7-b7-92-fb-ac-c6-ec-9f-74-a8-1e-84-94-66"; // 1.4.0 (CUSTOM - NO LOGS)
+                return GameRegion == GameRegion.Tc ? "A0-F4-5C-F3-75-16-33-88-82-15-17-FE-17-EB-10-21-26-88-08-34-BF-2C-20-CE-C7-DD-C8-8F-79-2A-0E-C6" // 1.2.1 (CUSTOM - NO LOGS)
+                    : "97-06-23-B9-C6-F2-AF-10-22-13-08-27-8E-9D-94-92-50-EC-ED-68-2B-CE-74-09-BD-2B-B3-A3-03-E0-B7-D2"; // 1.4.0 (CUSTOM - NO LOGS)
             }
         }
 

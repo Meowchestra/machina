@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>2.4.4.3</Version>
-        <AssemblyVersion>2.4.4.3</AssemblyVersion>
-        <FileVersion>2.4.4.3</FileVersion>
+        <Version>2.4.4.9</Version>
+        <AssemblyVersion>2.4.4.9</AssemblyVersion>
+        <FileVersion>2.4.4.9</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -35,11 +35,13 @@
 
     <ItemGroup>
         <None Remove="Deucalion\Distrib\deucalion-1.4.0.dll" />
+        <None Remove="Deucalion\Distrib\deucalion-1.2.1.dll" />
     </ItemGroup>
 
     <ItemGroup>
         <EmbeddedResource Include="Headers\Opcodes\Chinese.txt" />
         <EmbeddedResource Include="Headers\Opcodes\Global.txt" />
+        <EmbeddedResource Include="Headers\Opcodes\Tc.txt" />
         <EmbeddedResource Include="Headers\Opcodes\Korean.txt" />
     </ItemGroup>
 
@@ -56,6 +58,13 @@
         <Content Include="Deucalion\Distrib\deucalion-1.4.0.dll">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <TargetPath>deucalion-1.4.0.dll</TargetPath>
+            <Pack>True</Pack>
+            <PackagePath>lib\$(TargetFrameworks)</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="Deucalion\Distrib\deucalion-1.2.1.dll">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <TargetPath>deucalion-1.2.1.dll</TargetPath>
             <Pack>True</Pack>
             <PackagePath>lib\$(TargetFrameworks)</PackagePath>
             <PackageCopyToOutput>true</PackageCopyToOutput>
