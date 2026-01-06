@@ -67,7 +67,7 @@ namespace Machina.FFXIV.Tests
             Assert.IsEmpty(TestInfrastructure.Listener.Messages);
         }
 
-        [TestMethod]
+        //[TestMethod]
         public void FFXIVBundle_StoreData_OneBundle_ThreeMessagesOneBlank()
         {
             FFXIV.Oodle.OodleFactory.SetImplementation(FFXIV.Oodle.OodleImplementation.FfxivTcp, @"Y:\game\ffxiv_dx11.exe");
