@@ -13,10 +13,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v6
 
-    - name: Setup .NET SDK 10
+    - name: Setup .NET SDK 11
       uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: '10'
+        dotnet-version: '11'
 
     - name: Build with dotnet
       run: dotnet build -c Release
@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: Machina
-        path: Machina.FFXIV/bin/Release/net10.0/Machina.dll
+        path: Machina.FFXIV/bin/Release/net11.0/Machina.dll
         if-no-files-found: error
         retention-days: 1
 
@@ -33,6 +33,6 @@ jobs:
       uses: actions/upload-artifact@v7
       with:
         name: Machina.FFXIV
-        path: Machina.FFXIV/bin/Release/net10.0/Machina.FFXIV.dll
+        path: Machina.FFXIV/bin/Release/net11.0/Machina.FFXIV.dll
         if-no-files-found: error
         retention-days: 1
