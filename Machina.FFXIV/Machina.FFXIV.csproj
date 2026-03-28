@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <Version>2.4.6.0</Version>
-        <AssemblyVersion>2.4.6.0</AssemblyVersion>
-        <FileVersion>2.4.6.0</FileVersion>
+        <Version>2.4.6.5</Version>
+        <AssemblyVersion>2.4.6.5</AssemblyVersion>
+        <FileVersion>2.4.6.5</FileVersion>
         <EnableNETAnalyzers>true</EnableNETAnalyzers>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
