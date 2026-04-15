@@ -167,7 +167,7 @@ namespace Machina.FFXIV.Deucalion
             get
             {
                 return GameRegion == GameRegion.TraditionalChinese ? "A0-F4-5C-F3-75-16-33-88-82-15-17-FE-17-EB-10-21-26-88-08-34-BF-2C-20-CE-C7-DD-C8-8F-79-2A-0E-C6" // 1.2.1 (CUSTOM - NO LOGS)
-                    : "11-25-65-E3-04-46-8A-B6-4B-7F-F5-DE-23-67-36-6E-DE-AB-D7-95-BB-5D-01-AA-F9-EE-6F-3B-B0-68-E1-5A"; // 1.5.0 (CUSTOM - NO LOGS)
+                    : "D2-81-1B-12-A2-33-BB-D6-CC-48-31-C0-DB-BC-0F-E6-FE-95-CF-02-8D-13-0F-F6-C9-6B-4A-E0-2F-FD-C4-B5"; // 1.5.0 (CUSTOM - NO LOGS)
             }
         }
 
