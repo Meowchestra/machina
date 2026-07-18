@@ -135,26 +135,12 @@ namespace Machina.FFXIV.Deucalion
         /// <summary>
         /// returns the expected Deucalion file name based on the Game Region
         /// </summary>
-        public static string DeucalionFileName
-        {
-            get
-            {
-                return GameRegion == GameRegion.TraditionalChinese ? "deucalion-1.2.1.dll" : "deucalion-1.5.0.dll";
-            }
-        }
+        public static string DeucalionFileName => "deucalion-1.5.0.dll";
 
         /// <summary>
         /// Minimum version of Deucalion supported by Machina
         /// </summary>
-        public static Version DeucalionVersion
-        {
-            get
-            {
-                return GameRegion == GameRegion.TraditionalChinese?
-                    new Version(1, 2, 1) :
-                    new Version(1, 5, 0);
-            }
-        }
+        public static Version DeucalionVersion => new Version(1, 5, 0);
 
         /// <summary>
         /// Stores the folder where Deucalion should be loaded from
@@ -162,14 +148,7 @@ namespace Machina.FFXIV.Deucalion
         /// </summary>
         public static string DeucalionPath { get; set; } = Environment.CurrentDirectory;
 
-        private static string _checksum
-        {
-            get
-            {
-                return GameRegion == GameRegion.TraditionalChinese ? "A0-F4-5C-F3-75-16-33-88-82-15-17-FE-17-EB-10-21-26-88-08-34-BF-2C-20-CE-C7-DD-C8-8F-79-2A-0E-C6" // 1.2.1 (CUSTOM - NO LOGS)
-                    : "D2-81-1B-12-A2-33-BB-D6-CC-48-31-C0-DB-BC-0F-E6-FE-95-CF-02-8D-13-0F-F6-C9-6B-4A-E0-2F-FD-C4-B5"; // 1.5.0 (CUSTOM - NO LOGS)
-            }
-        }
+        private static string _checksum => "7B-91-38-71-DB-DC-06-8C-DE-3D-6B-00-C7-86-8C-A7-AF-D7-19-08-17-28-DC-2E-2D-7C-93-69-36-5B-EB-6A"; // 1.5.0 (NIGHTLY CUSTOM BUILD - NO LOGS)
 
         public static bool ValidateLibraryChecksum()
         {
